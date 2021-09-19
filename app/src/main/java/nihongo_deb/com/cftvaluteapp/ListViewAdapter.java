@@ -29,9 +29,11 @@ public class ListViewAdapter extends ArrayAdapter<JSONObject> {
         View listViewItem = inflater.inflate(listLayout, null, false);
         TextView name = listViewItem.findViewById(R.id.tv_name);
         TextView value = listViewItem.findViewById(R.id.tv_value);
+        TextView nominal = listViewItem.findViewById(R.id.tv_nominal);
         try{
             name.setText(valutes.get(position).getString("Name"));
-            value.setText(valutes.get(position).getString("Value"));
+            nominal.setText("Номинал: "+ valutes.get(position).getString("Nominal"));
+            value.setText(valutes.get(position).getString("Previous") + " -> " + valutes.get(position).getString("Value"));
         }catch (JSONException je){
             je.printStackTrace();
         }
