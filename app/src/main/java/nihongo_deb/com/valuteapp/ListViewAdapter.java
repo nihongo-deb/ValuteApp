@@ -1,4 +1,4 @@
-package nihongo_deb.com.cftvaluteapp;
+package nihongo_deb.com.valuteapp;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -13,6 +13,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 public class ListViewAdapter extends ArrayAdapter<JSONObject> {
+
     int listLayout;
     ArrayList<JSONObject> valutes;
     Context context;
@@ -39,5 +40,4 @@ public class ListViewAdapter extends ArrayAdapter<JSONObject> {
         }
         return listViewItem;
     }
-
 }

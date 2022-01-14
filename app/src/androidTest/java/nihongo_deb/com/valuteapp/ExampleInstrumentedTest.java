@@ -1,4 +1,4 @@
-package nihongo_deb.com.cftvaluteapp;
+package nihongo_deb.com.valuteapp;
 
 import android.content.Context;
 

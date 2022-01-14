@@ -1,4 +1,4 @@
-package nihongo_deb.com.cftvaluteapp;
+package nihongo_deb.com.valuteapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,21 +23,10 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class MainActivity extends AppCompatActivity {
+
     private static final String JSON_URL = "https://www.cbr-xml-daily.ru/daily_json.js";
 
     ListView valuteItems;
-
-    @Override
-    protected void onSaveInstanceState(Bundle savedInstanceState) {
-        super.onSaveInstanceState(savedInstanceState);
-        savedInstanceState.putInt("ScrollPosition", valuteItems.getTop());
-    }
-
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        valuteItems.setTop(savedInstanceState.getInt("ScrollPosition", 0));
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
